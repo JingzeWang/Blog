@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          restart_ | Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://blog.iostream.site/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/header_img/home.jpg') 
+            /*config*/
+        
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>田 所 浩 二</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">个人博客</span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">田 所 浩 二</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/friends/">Friends</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/article/洛谷P1439/">
+        <h2 class="post-title">
+            洛谷P1439
+        </h2>
+        <h3 class="post-subtitle">
+            【模板】最长公共子序列
+        </h3>
+        <div class="post-content-preview">
+            P1439:【模板】最长公共子序列
+链接：https://www.luogu.org/problemnew/show/P1439
+\(Time\;Limit:\;1000\;ms\)
+\(Memory\;Limit:\;128\;MB​\)
+题目描述
+给出\(1-n\)的两个排列\(P1\)和\(P2\)，求它们的最长公共子序列。
+输入格式
+第一行是一个数\(n\)，
+接下来......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-03-07
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#ACM" title="ACM">ACM</a>
+            
+              <a href="/tags/#LIS" title="LIS">LIS</a>
+            
+              <a href="/tags/#二分" title="二分">二分</a>
+            
+              <a href="/tags/#洛谷" title="洛谷">洛谷</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/高数笔记1/">
+        <h2 class="post-title">
+            高数笔记1
+        </h2>
+        <h3 class="post-subtitle">
+            平面点集&多元函数
+        </h3>
+        <div class="post-content-preview">
+            一、平面点集的一些概念
+一元函数 值域 \(R\)-直线
+二元函数 值域 \(R^2\)-平面
+1. 邻域
+1. 定义
+\(P_0(x_0,y_0)为平面上的一点,\delta&gt;0​\)
+\(点P的\delta邻域U(P_0,\delta)=\{P||PP_0|&lt;\delta|\}​\)
+\(其中|PP_0|=\sqrt{(x-x_0)^2+(y-y_0)^2}\)......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-03-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#高等数学" title="高等数学">高等数学</a>
+            
+              <a href="/tags/#学习笔记" title="学习笔记">学习笔记</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/LeetCode-583/">
+        <h2 class="post-title">
+            LeetCode-583
+        </h2>
+        <h3 class="post-subtitle">
+            Delete Operation for Two Strings Multiply Strings
+        </h3>
+        <div class="post-content-preview">
+            LeetCode-583: Delete Operation for Two Strings Multiply Strings
+链接：https://leetcode.com/problems/delete-operation-for-two-strings/
+题解
+\(LCS(Longest\;Common\;Subsequence)​\)板子题
+\(Dynamic\;progra......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-03-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#ACM" title="ACM">ACM</a>
+            
+              <a href="/tags/#Cetus" title="Cetus">Cetus</a>
+            
+              <a href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+            
+              <a href="/tags/#dp" title="dp">dp</a>
+            
+              <a href="/tags/#LCS" title="LCS">LCS</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/FZU-2020/">
+        <h2 class="post-title">
+            FZU-2020
+        </h2>
+        <h3 class="post-subtitle">
+            组合
+        </h3>
+        <div class="post-content-preview">
+            FZU-2020: 组合
+链接：http://acm.fzu.edu.cn/problem.php?pid=2020
+\(Time\;Limit:\;1000\;ms\)
+\(Memory\;Limit:\;37268\;kB​\)
+Description
+给出组合数\(C(n,m)​\), 表示从\(n​\)个元素中选出\(m​\)个元素的方案数。例如\(C(5,2)=10​\)......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-03-04
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#ACM" title="ACM">ACM</a>
+            
+              <a href="/tags/#数论" title="数论">数论</a>
+            
+              <a href="/tags/#FOJ" title="FOJ">FOJ</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/LeetCode-43/">
+        <h2 class="post-title">
+            LeetCode-43
+        </h2>
+        <h3 class="post-subtitle">
+            Multiply Strings
+        </h3>
+        <div class="post-content-preview">
+            LeetCode-43: Multiply Strings
+链接：https://leetcode.com/problems/multiply-strings/
+题解
+OJ​好鬼畜啊
+大数乘法板子题
+结果需要转化为\(string\)型不然会\(RE\)
+\(Divide\;and\;conquer​\)(分治法)​
+将每一位算出来，最后进行进位和反转即可
+123456789......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-02-26
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#ACM" title="ACM">ACM</a>
+            
+              <a href="/tags/#Cetus" title="Cetus">Cetus</a>
+            
+              <a href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+            
+              <a href="/tags/#分治" title="分治">分治</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/BZOJ-2818/">
+        <h2 class="post-title">
+            BZOJ-2818
+        </h2>
+        <h3 class="post-subtitle">
+            Gcd
+        </h3>
+        <div class="post-content-preview">
+            BZOJ-2818: Gcd
+链接：https://www.lydsy.com/JudgeOnline/problem.php?id=2818
+\(Time\;Limit:\;10\;Sec\)
+\(Memory\;Limit:\;256\;MB\)
+Description
+给定整数N，求\(1 \le x,y\le N\)且\(Gcd(x,y)\)为素数的数对\((x,y)\)有......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-02-25
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#ACM" title="ACM">ACM</a>
+            
+              <a href="/tags/#数论" title="数论">数论</a>
+            
+              <a href="/tags/#BZOJ" title="BZOJ">BZOJ</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/BZOJ-1257/">
+        <h2 class="post-title">
+            BZOJ-1257
+        </h2>
+        <h3 class="post-subtitle">
+            余数之和
+        </h3>
+        <div class="post-content-preview">
+            BZOJ-1257: [CQOI2007]余数之和
+链接：https://www.lydsy.com/JudgeOnline/problem.php?id=1257
+\(Time\;Limit:\;5\;Sec\)
+\(Memory\;Limit:\;128\;MB​\)
+Description
+给出正整数n和k，计算\(j(n, k)=k\;mod\;1 + k\;mod\;2 ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-02-25
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#ACM" title="ACM">ACM</a>
+            
+              <a href="/tags/#数论" title="数论">数论</a>
+            
+              <a href="/tags/#BZOJ" title="BZOJ">BZOJ</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/CSAPP第一章/">
+        <h2 class="post-title">
+            CSAPP第一章
+        </h2>
+        <h3 class="post-subtitle">
+            计算机系统漫游
+        </h3>
+        <div class="post-content-preview">
+            ​ 我错了我再也不拖更了QAQ
+
+hello程序的编写
+以ubuntu为例（服务器上运行，使用powershell）
+
+连接服务器
+
+1ssh root@***.***.***.***
+
+安装g++编译器
+
+12sudo apt-get install build-essentialsudo apt-get install gdb
+
+使用\(vi\)编辑器
+
+1......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-02-19
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Cetus" title="Cetus">Cetus</a>
+            
+              <a href="/tags/#CSAPP" title="CSAPP">CSAPP</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/2019-2-1/">
+        <h2 class="post-title">
+            2019-2-1
+        </h2>
+        <h3 class="post-subtitle">
+            拖更声明
+        </h3>
+        <div class="post-content-preview">
+            2019-2-1拖更声明
+CSAPP太难了我转专业吧
+由于CSAPP新内容比较多，一时半会儿消化不完emmm咕咕咕
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-02-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#gugugu" title="gugugu">gugugu</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/article/科学上网/">
+        <h2 class="post-title">
+            科学上网
+        </h2>
+        <h3 class="post-subtitle">
+            vps
+        </h3>
+        <div class="post-content-preview">
+            如何使用vultr科学上网
+打开vultr的网页，注册账号，充钱变强
+选择服务器节点和配置信息
+
+
+发现ping不通
+
+不是我自己网络问题，明显是被墙了(大清国网墙万岁)
+
+一气之下开了四个
+
+然后有一个可用的
+打开putty，连接服务器，输入以下代码
+123wget —no-check-certificate -O shadowsocks-all.sh https......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by restart_ on
+            2019-01-30
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Cetus" title="Cetus">Cetus</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    
+        <li class="next">
+            <a href="/archives/2/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+
+                <br>
+
+                <!-- require APlayer -->
+                
+
+                <!-- 如果开启评论功能 -->
+                
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/#ACM" title="ACM" rel="14">ACM</a>
+            
+        
+            
+            <a href="/tags/#数论" title="数论" rel="3">数论</a>
+            
+        
+            
+            <a href="/tags/#BZOJ" title="BZOJ" rel="2">BZOJ</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#Cetus" title="Cetus" rel="4">Cetus</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#LeetCode" title="LeetCode" rel="2">LeetCode</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Wannafly Winter 2018" title="Wannafly Winter 2018" rel="7">Wannafly Winter 2018</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id = "avatar_pic" src="/img/avatar/tiansuohaoer.jpg" />
+        
+
+        
+            <p>Stay hungry,Stay foolish</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+
+            
+
+            
+
+            
+                <li>
+                    <a target="_blank"  href="https://github.com/JingzeWang">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+
+        <hr>
+    
+        
+  <h5>RECENT POSTS</h3>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/article/洛谷P1439/">洛谷P1439</a>
+        </li>
+      
+        <li>
+          <a href="/article/高数笔记1/">高数笔记1</a>
+        </li>
+      
+        <li>
+          <a href="/article/LeetCode-583/">LeetCode-583</a>
+        </li>
+      
+        <li>
+          <a href="/article/FZU-2020/">FZU-2020</a>
+        </li>
+      
+        <li>
+          <a href="/article/LeetCode-43/">LeetCode-43</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="https://aidaip.github.io/" target="_blank">Aidai&#39;s Blog</a></li>
+    
+        <li><a href="http://seventeenjcinta.com/" target="_blank">宛风</a></li>
+    
+        <li><a href="https://blog.csdn.net/yuhao_99" target="_blank">yuhao_99&#39;s Blog</a></li>
+    
+        <li><a href="https://90nwyn.blog.luogu.org/" target="_blank">90n&#39;s Blog</a></li>
+    
+        <li><a href="https://blog.csdn.net/altoer" target="_blank">altoer&#39;s Blog</a></li>
+    
+        <li><a href="https://haibara777.github.io/" target="_blank">CaiJi&#39;s Blog</a></li>
+    
+</ul>
+
+        <hr>
+    
+        
+    <h5>ARCHIVES</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archive/2019/03/">March 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archive/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archive/2019/01/">January 2019</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+
+        <hr>
+    
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/JingzeWang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; restart_ 2019 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="https://blog.iostream.site">restart_</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=JingzeWang&repo=JingzeWang.github.io/stargazers&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://blog.iostream.site/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-133558540-1';
+    var _gaDomain = 'blog.iostream.site';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://blog.iostream.site/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+
+</html>
