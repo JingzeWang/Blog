@@ -144,14 +144,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/friends/">Friends</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/friends/">Friends</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -242,7 +242,7 @@
 &amp;i) &amp;P\in E\\
 ii) &amp;\exists U(P)\subset E\\
 \end{array}
-=&gt;P为E的内点
+\Rightarrow P为E的内点
 \]</span></p>
 <h3 id="2-外点">2. 外点</h3>
 <p><span class="math display">\[
@@ -250,7 +250,7 @@ ii) &amp;\exists U(P)\subset E\\
 &amp;i) &amp;P\notin E\\
 ii) &amp;\exists U(P)\cap E = \varnothing\\
 \end{array}
-=&gt;P为E的外点
+\Rightarrow P为E的外点
 \]</span></p>
 <h3 id="3-边界点">3. 边界点</h3>
 <p><span class="math display">\[
@@ -262,7 +262,7 @@ ii) &amp;\forall U(P):
 &amp;U(P)\cap R^2\backslash E \ne \varnothing\\
 \end{split}\\
 \end{array}
-=&gt;P为E的边界点
+\Rightarrow P为E的边界点
 \]</span></p>
 <p><span class="math display">\[
 E的边界点的全体-E的边界,记为\partial E
@@ -350,26 +350,26 @@ z=xy&amp;马鞍面(双曲抛物面)\\
 <h1 id="三-多元函数的极限二元函数">三、多元函数的极限(二元函数)</h1>
 <p><span class="math inline">\(p\rightarrow p_0(任何方式)\)</span></p>
 <p><span class="math inline">\(f(p)\rightarrow A(常数)\)</span></p>
-<h2 id="def-3epsilon-delta">Def 3<span class="math inline">\((\epsilon-\delta)\)</span></h2>
+<h2 id="def-3varepsilon-delta">Def 3<span class="math inline">\((\varepsilon-\delta)\)</span></h2>
 <p><span class="math inline">\(f(x,y)在区域D(或开或闭)上有定义,P_0(x_0,y_0)为D的内点或非孤立的边界点(聚点)\)</span></p>
-<p><span class="math inline">\(若\exists A\in R,对\forall \epsilon &gt;0,\exists \delta &gt;0,\forall P(x,y)\in D\)</span></p>
-<p><span class="math inline">\(0&lt;|PP_1|=\sqrt{(x-x_0)^2+(y-y_0)^2}&lt;\delta(即P\in \mathring{U}(P_0,\delta)),有|f(x,y)-A|&lt;\epsilon​\)</span></p>
+<p><span class="math inline">\(若\exists A\in R,对\forall \varepsilon &gt;0,\exists \delta &gt;0,\forall P(x,y)\in D\)</span></p>
+<p><span class="math inline">\(0&lt;|PP_1|=\sqrt{(x-x_0)^2+(y-y_0)^2}&lt;\delta(即P\in \mathring{U}(P_0,\delta)),有|f(x,y)-A|&lt;\varepsilon​\)</span></p>
 <p><span class="math inline">\(则称A为f(x,y)在点(x,y)趋于P(x_0,y_0)时的极限,记为\)</span> <span class="math display">\[
-\lim_{x\rightarrow x_0,y \rightarrow y_0}f(x,y)=A\\
+\lim_{x\rightarrow x_0\\y \rightarrow y_0}f(x,y)=A\\
 \lim_{(x,y)\rightarrow(x_0,y_0)}f(x,y)=A\\
 f(x,y)\rightarrow A(\rho\rightarrow0),其中\rho=|PP_0|\\
 \lim_{p \rightarrow p_0}f(p)=A
 \]</span></p>
 <h2 id="remark">Remark</h2>
 <h3 id="1-二元函数的极限-二重极限">1. 二元函数的极限-(二重极限)</h3>
-<p><span class="math inline">\((\begin{array} &amp;x-x_0\\ y -y_0\end{array})同时进行\)</span></p>
+<p><span class="math inline">\((\begin{array} &amp;x\rightarrow x_0\\ y \rightarrow y_0\end{array})同时进行​\)</span></p>
 <p>e.g. <span class="math display">\[
-证明:\lim_{x\rightarrow x_0,y \rightarrow y_0}^{}(x^2+y^2)sin \frac{1}{x^2+y^2}=0
+证明:\lim_{x\rightarrow x_0\\y \rightarrow y_0}^{}(x^2+y^2)sin \frac{1}{x^2+y^2}=0
 \]</span></p>
 <p><span class="math display">\[
-(\epsilon-\delta)记\forall\epsilon&gt;0,\exists \delta=\sqrt{\epsilon}&gt;0\\
+(\varepsilon-\delta)记\forall\varepsilon&gt;0,\exists \delta=\sqrt{\varepsilon}&gt;0\\
 \forall (x,y):0&lt;\sqrt{(x-0)^2+(y-0)^2}&lt;\delta时\\
-有|(x^2+y^2)sin\frac{1}{x^2+y^2}-0|\le x^2+y^2 &lt; \epsilon,得证
+有|(x^2+y^2)sin\frac{1}{x^2+y^2}-0|\le x^2+y^2 &lt; \varepsilon,得证
 \]</span></p>
 <h3 id="2-pxy极限不存在">2. <span class="math inline">\(P(x,y)\)</span>极限不存在</h3>
 <p><span class="math display">\[
@@ -448,7 +448,7 @@ f(x,y)\rightarrow A(\rho\rightarrow0),其中\rho=|PP_0|\\
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#一-平面点集的一些概念"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x4E00;&#x3001;&#x5E73;&#x9762;&#x70B9;&#x96C6;&#x7684;&#x4E00;&#x4E9B;&#x6982;&#x5FF5;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-邻域"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1. &#x90BB;&#x57DF;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-定义"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1. &#x5B9A;&#x4E49;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-几何意义"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">2. &#x51E0;&#x4F55;&#x610F;&#x4E49;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-简记"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">3. &#x7B80;&#x8BB0;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-点p_0的去心邻域"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">4. &#x70B9;<span class="math inline">\(P_0\)</span>&#x7684;&#x53BB;&#x5FC3;&#x90BB;&#x57DF;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-区域"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2. &#x533A;&#x57DF;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-内点"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">1. &#x5185;&#x70B9;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-外点"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">2. &#x5916;&#x70B9;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-边界点"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">3. &#x8FB9;&#x754C;&#x70B9;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">1.2.3.1.</span> <span class="toc-nav-text">Remark</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-开集"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">4. &#x5F00;&#x96C6;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-联通的"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">5. &#x8054;&#x901A;&#x7684;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-开区域"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">6. &#x5F00;&#x533A;&#x57DF;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-闭区域"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">7. &#x95ED;&#x533A;&#x57DF;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8-有界点集"><span class="toc-nav-number">1.2.8.</span> <span class="toc-nav-text">8. &#x6709;&#x754C;&#x70B9;&#x96C6;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#eg"><span class="toc-nav-number">1.2.8.1.</span> <span class="toc-nav-text">e.g.</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">1.2.9.</span> <span class="toc-nav-text">Remark</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#二-多元函数的概念"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x4E8C;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6982;&#x5FF5;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Def 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">Remark</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-类似可定义"><span class="toc-nav-number">2.1.1.1.</span> <span class="toc-nav-text">1. &#x7C7B;&#x4F3C;&#x53EF;&#x5B9A;&#x4E49;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-自然定义域"><span class="toc-nav-number">2.1.1.2.</span> <span class="toc-nav-text">2. &#x81EA;&#x7136;&#x5B9A;&#x4E49;&#x57DF;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#统一"><span class="toc-nav-number">2.1.1.3.</span> <span class="toc-nav-text">&#x7EDF;&#x4E00;<点函数观点></点函数观点></span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-2"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Def 2</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Remark</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#三-多元函数的极限二元函数"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x4E09;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;(&#x4E8C;&#x5143;&#x51FD;&#x6570;)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-3epsilon-delta"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Def 3<span class="math inline">\((\epsilon-\delta)\)</span></span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Remark</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-二元函数的极限-二重极限"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">1. &#x4E8C;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;-(&#x4E8C;&#x91CD;&#x6781;&#x9650;)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-pxy极限不存在"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2. <span class="math inline">\(P(x,y)\)</span>&#x6781;&#x9650;&#x4E0D;&#x5B58;&#x5728;</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#一-平面点集的一些概念"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x4E00;&#x3001;&#x5E73;&#x9762;&#x70B9;&#x96C6;&#x7684;&#x4E00;&#x4E9B;&#x6982;&#x5FF5;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-邻域"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1. &#x90BB;&#x57DF;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-定义"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1. &#x5B9A;&#x4E49;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-几何意义"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">2. &#x51E0;&#x4F55;&#x610F;&#x4E49;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-简记"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">3. &#x7B80;&#x8BB0;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-点p_0的去心邻域"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">4. &#x70B9;<span class="math inline">\(P_0\)</span>&#x7684;&#x53BB;&#x5FC3;&#x90BB;&#x57DF;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-区域"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2. &#x533A;&#x57DF;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-内点"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">1. &#x5185;&#x70B9;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-外点"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">2. &#x5916;&#x70B9;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-边界点"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">3. &#x8FB9;&#x754C;&#x70B9;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">1.2.3.1.</span> <span class="toc-nav-text">Remark</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-开集"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">4. &#x5F00;&#x96C6;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-联通的"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">5. &#x8054;&#x901A;&#x7684;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-开区域"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">6. &#x5F00;&#x533A;&#x57DF;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-闭区域"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">7. &#x95ED;&#x533A;&#x57DF;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8-有界点集"><span class="toc-nav-number">1.2.8.</span> <span class="toc-nav-text">8. &#x6709;&#x754C;&#x70B9;&#x96C6;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#eg"><span class="toc-nav-number">1.2.8.1.</span> <span class="toc-nav-text">e.g.</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">1.2.9.</span> <span class="toc-nav-text">Remark</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#二-多元函数的概念"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x4E8C;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6982;&#x5FF5;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Def 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">Remark</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-类似可定义"><span class="toc-nav-number">2.1.1.1.</span> <span class="toc-nav-text">1. &#x7C7B;&#x4F3C;&#x53EF;&#x5B9A;&#x4E49;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-自然定义域"><span class="toc-nav-number">2.1.1.2.</span> <span class="toc-nav-text">2. &#x81EA;&#x7136;&#x5B9A;&#x4E49;&#x57DF;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#统一"><span class="toc-nav-number">2.1.1.3.</span> <span class="toc-nav-text">&#x7EDF;&#x4E00;<点函数观点></点函数观点></span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-2"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Def 2</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Remark</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#三-多元函数的极限二元函数"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x4E09;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;(&#x4E8C;&#x5143;&#x51FD;&#x6570;)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-3varepsilon-delta"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Def 3<span class="math inline">\((\varepsilon-\delta)\)</span></span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Remark</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-二元函数的极限-二重极限"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">1. &#x4E8C;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;-(&#x4E8C;&#x91CD;&#x6781;&#x9650;)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-pxy极限不存在"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2. <span class="math inline">\(P(x,y)\)</span>&#x6781;&#x9650;&#x4E0D;&#x5B58;&#x5728;</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>

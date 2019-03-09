@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          科学上网 - restart_ | Blog
+          高数笔记2 - restart_ | Blog
         
     </title>
 
-    <link rel="canonical" href="https://blog.iostream.site/article/科学上网/">
+    <link rel="canonical" href="https://blog.iostream.site/article/高数笔记2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -88,14 +88,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Cetus" title="Cetus">Cetus</a>
+                              <a class="tag" href="/tags/#高等数学" title="高等数学">高等数学</a>
+                            
+                              <a class="tag" href="/tags/#学习笔记" title="学习笔记">学习笔记</a>
                             
                         </div>
-                        <h1>科学上网</h1>
-                        <h2 class="subheading">vps</h2>
+                        <h1>高数笔记2</h1>
+                        <h2 class="subheading">平面点集&amp;多元函数</h2>
                         <span class="meta">
                             Posted by restart_ on
-                            2019-01-30
+                            2019-03-09
                         </span>
                     </div>
                 
@@ -219,27 +221,141 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="如何使用vultr科学上网">如何使用vultr科学上网</h1>
-<p>打开vultr的网页，注册账号，<del>充钱变强</del></p>
-<p>选择服务器节点和配置信息</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1ad8cd1b.png"></p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1ad8cd1b.png"></p>
-<p>发现ping不通</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e63db86.png"></p>
-<p>不是我自己网络问题，明显是被墙了<del>(大清国网墙万岁)</del></p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e660b0b.png"></p>
-<p>一气之下开了四个</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e6584f1.jpg"></p>
-<p>然后有一个可用的</p>
-<p>打开putty，连接服务器，输入以下代码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget —no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
-<p>配置服务器，得到端口和一串ssr链接</p>
-<p>配置防火墙</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e63c1ab.jpg"></p>
-<p>将刚才的ssr码导入shadowsocks，使用shadowsocks连接服务器</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e6418bf.jpg"></p>
-<p>成功</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e64350a.jpg"></p>
+                <p>e.g.</p>
+<p><span class="math display">\[
+f(x,y)=\begin{cases}
+\frac{xy}{x^2+y^2}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+讨论:\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)
+\]</span></p>
+<p><span class="math display">\[
+\begin{split}
+解：&amp;1.\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{y\rightarrow0}f(0,y)=0\\
+&amp;2.\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{x\rightarrow0}f(x,x)=\frac{1}{2}
+\end{split}\\
+根据路径法,\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)不存在
+\]</span></p>
+<p><span class="math display">\[
+若先x\rightarrow 0,后y\rightarrow0,\\
+有\lim_{y\rightarrow0}\lim_{x\rightarrow0}f(x,y)=\lim_{y\rightarrow0}\frac{0}{y^2}=0\\
+类似有\lim_{x\rightarrow0}\lim_{y\rightarrow0}f(x,y)=0(先y\rightarrow 0,后x\rightarrow0),
+称为二次极限存在（二次极限有先后次序）
+\]</span></p>
+<p>练习： <span class="math display">\[
+证明:\lim_{x\rightarrow0\\y\rightarrow0}\frac{x-y}{x+y}不存在(&quot;路径法&quot;)
+\]</span></p>
+<h3 id="3-二重极限存在nleftrightarrow二次极限-存在">3. 二重极限存在<span class="math inline">\(\nLeftrightarrow\)</span>二次极限 存在</h3>
+<p>e.g.1 <span class="math display">\[
+f(x,y)=\begin{cases}
+\frac{xy}{x^2+y^2}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
+\end{cases}\\
+在点(0,0)二次极限存在,二重极限不存在
+\]</span> e.g.2 <span class="math display">\[
+f(x,y)=\begin{cases}
+xsin\frac{1}{y}+y\sin\frac{1}{x}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
+\end{cases}\\
+\begin{split}
+&amp;0\le|xsin\frac{1}{y}+ysin\frac{1}{x}|\le |x|+|y|\rightarrow0(\begin{array} &amp;x\rightarrow x_0\\  y\rightarrow y_0\end{array})\\
+\Rightarrow&amp;\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{x\rightarrow0\\y\rightarrow0}(xsin\frac{1}{y}+y\sin\frac{1}{x})=0,二重极限存在
+\end{split}\\
+\begin{split}
+y\ne 0时,&amp;\lim_{x\rightarrow0}f(x,y)=\lim_{x\rightarrow0}(xsin\frac{1}{y}+y\sin\frac{1}{x})不存在\\
+\Rightarrow&amp;\lim_{y\rightarrow0}\lim_{x\rightarrow0}f(x,y)不存在\\
+同理&amp;\lim_{x\rightarrow0}\lim_{y\rightarrow0}f(x,y)也不存在
+\end{split}
+\]</span></p>
+<h3 id="4-多元函数的极限">4. 多元函数的极限</h3>
+<p><span class="math display">\[
+\lim_{P\rightarrow P_0}f(P)=A(A\in R)\;点函数观点
+\]</span></p>
+<h3 id="5-二元函数极限的计算">5. 二元函数极限的计算</h3>
+<p>总结：</p>
+<ol type="1">
+<li><span class="math inline">\(&quot;\varepsilon -\delta&quot;\)</span>（猜测证）</li>
+<li>四则运算</li>
+<li>两边夹</li>
+<li>变量替换(<span class="math inline">\(&quot;L&#39; Hospital&quot;\)</span>法则在二元函数求极限时不能直接应用)</li>
+<li>二元初等函数的连续性(后补)</li>
+</ol>
+<p>e.g.1 <span class="math display">\[
+\lim_{x\rightarrow0\\y\rightarrow1}\frac{1-xy}{x^2+y^2}=\frac{1}{1^2}=1
+\tag{总结5}
+\]</span> e.g.2 <span class="math inline">\(&quot;\varepsilon -\delta&quot;\)</span></p>
+<p>e.g.3 <span class="math display">\[
+\begin{split}
+&amp;\lim_{x\rightarrow0\\y\rightarrow0}\frac{x^2+y^2}{\sqrt{x^2+y^2+1}-1}\\
+=&amp;\lim_{u\rightarrow0}\frac{u}{\sqrt{u+1}-1}&amp;\color{red}{\cdots&quot;\frac{0}{0}&quot;,x^2+y^2=u变量替换转化为一元函数极限}\\
+=&amp;\lim_{u\rightarrow0}\frac{1}{\frac{1}{2}(u+1)^2}=2\\
+或=&amp;\lim_{u\rightarrow0}\frac{u}{\frac{1}{2}u}=2&amp;\color{red}{\cdots&quot;\frac{0}{0}&quot;}
+\end{split}
+\]</span> e.g.4 <span class="math display">\[
+\begin{split}
+&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{ln(1+xy)}{y}\\
+=&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{ln(1+xy)}{xy}\cdot x\quad(&quot;\frac{0}{0}&quot;)\\
+=&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{ln(1+xy)}{xy}\cdot\lim_{x\rightarrow 2\\y\rightarrow0}x\quad (四则)\\
+\Rightarrow&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{ln(1+xy)}{xy}
+=2\lim_{u\rightarrow0}\frac{ln(1+u)}{u}=2\quad(令xy=u,变量替换)
+\end{split}
+\]</span> e.g.5 <span class="math display">\[
+&quot;\frac{\infty}{\infty}&quot;:\lim_{x\rightarrow\infty\\y\rightarrow\infty}(x^2+y^2)e^{-(x+y)}=0\\
+\begin{split}
+&amp;两边夹\quad&amp;0\le(x^2+y^2)e^{-(x+y)}\le \frac{(x+y)^2}{e^{x+y}}\rightarrow0(\begin{array} &amp;x\rightarrow +\infty\\  y \rightarrow +\infty\end{array})\\
+&amp;&amp;\lim_{u\rightarrow0}\frac{u^2}{e^u}=0\quad(换元法)\\
+&amp;练习:&amp;\lim_{x\rightarrow0\\y\rightarrow0}(x+y)ln(x^2+y^2)
+\end{split}\\
+\]</span></p>
+<h1 id="四-多元函数的连续性">四、多元函数的连续性</h1>
+<h2 id="def-4">Def 4</h2>
+<p><span class="math display">\[
+\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=f(x_0,y_0)\Rightarrow z=f(x,y)在P_0(x_0,y_0)连续\\
+否则,称z=f(x,y)在P_0(x_0,y_0)不连续,P_0为间断点
+\begin{cases}
+1.P_0点无定义\\
+2.极限不存在\\
+3.极限存在但\ne f(P_0)
+\end{cases}
+\]</span></p>
+<p>例如 <span class="math display">\[
+f(x,y)=
+\begin{cases}
+(x^2+y^2)sin\frac{1}{x^2+y^2}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
+\end{cases}\\
+\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=0=f(0,0),函数连续
+\]</span> <span class="math inline">\(Remark\)</span> 可推广</p>
+<h2 id="def-5">Def 5</h2>
+<p><span class="math display">\[
+z=f(x,y)在D上的每一点都连续，称f(x,y)在D上连续或f(x,y)为D上的连续函数
+\]</span></p>
+<h2 id="def-6">Def 6</h2>
+<p><span class="math display">\[
+多元初等函数:由常数及一元基本初等函数经过有限次四则运算和(或)有限次复合形成的函数
+\]</span></p>
+<p>e.g. <span class="math display">\[
+\lim_{x\rightarrow x_0\\y\rightarrow y_0}\frac{ln(2^x+e^y)+1}{sin(x^2+y^2)}=\frac{ln3+1}{sin1}\\
+\color{red}{一切二元初等函数在其定义域内都是连续的}\\
+z=f(x,y)\quad(x,y)\in D\\
+\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=f(x_0,y_0)为二元初等函数的极限\color{red}{(x_0,y_0)}\in D\\
+\]</span> 推广 <span class="math display">\[
+\begin{split}
+有界闭区域上二元连续函数的性质\\
+闭区间上一元连续函数的性质
+\end{split}
+\}整体性质
+\begin{cases}
+1.有界性\\
+2.最值性\\
+3.介值性\\
+4.一致连续性\\
+\end{cases}
+\]</span></p>
+<h1 id="偏导数">偏导数</h1>
+<p>见高数笔记3</p>
 
                 
 
@@ -247,13 +363,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/2019-2-1/" data-toggle="tooltip" data-placement="top" title="2019-2-1">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/article/Wannafly2018-Day7/" data-toggle="tooltip" data-placement="top" title="CCPC-Wannafly Winter Camp 2018 Day7">Next Post &rarr;</a>
+                            <a href="/article/洛谷P1439/" data-toggle="tooltip" data-placement="top" title="洛谷P1439">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -309,7 +421,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#如何使用vultr科学上网"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x5982;&#x4F55;&#x4F7F;&#x7528;vultr&#x79D1;&#x5B66;&#x4E0A;&#x7F51;</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-二重极限存在nleftrightarrow二次极限-存在"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">3. &#x4E8C;&#x91CD;&#x6781;&#x9650;&#x5B58;&#x5728;<span class="math inline">\(\nLeftrightarrow\)</span>&#x4E8C;&#x6B21;&#x6781;&#x9650; &#x5B58;&#x5728;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-多元函数的极限"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">4. &#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-二元函数极限的计算"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">5. &#x4E8C;&#x5143;&#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x8BA1;&#x7B97;</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#四-多元函数的连续性"><span class="toc-nav-number"></span> <span class="toc-nav-text">&#x56DB;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x8FDE;&#x7EED;&#x6027;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-4"><span class="toc-nav-number"></span> <span class="toc-nav-text">Def 4</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-5"><span class="toc-nav-number"></span> <span class="toc-nav-text">Def 5</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-6"><span class="toc-nav-number"></span> <span class="toc-nav-text">Def 6</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#偏导数"><span class="toc-nav-number"></span> <span class="toc-nav-text">&#x504F;&#x5BFC;&#x6570;</span></a>
         
         </div>
       </aside>
@@ -329,7 +441,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Cetus" title="Cetus">Cetus</a>
+                          <a class="tag" href="/tags/#高等数学" title="高等数学">高等数学</a>
+                        
+                          <a class="tag" href="/tags/#学习笔记" title="学习笔记">学习笔记</a>
                         
                     </div>
                 </section>
