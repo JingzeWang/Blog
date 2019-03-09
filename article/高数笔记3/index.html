@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          科学上网 - restart_ | Blog
+          高数笔记3 - restart_ | Blog
         
     </title>
 
-    <link rel="canonical" href="https://blog.iostream.site/article/科学上网/">
+    <link rel="canonical" href="https://blog.iostream.site/article/高数笔记3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -88,14 +88,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Cetus" title="Cetus">Cetus</a>
+                              <a class="tag" href="/tags/#高等数学" title="高等数学">高等数学</a>
+                            
+                              <a class="tag" href="/tags/#学习笔记" title="学习笔记">学习笔记</a>
                             
                         </div>
-                        <h1>科学上网</h1>
-                        <h2 class="subheading">vps</h2>
+                        <h1>高数笔记3</h1>
+                        <h2 class="subheading">偏导数</h2>
                         <span class="meta">
                             Posted by restart_ on
-                            2019-01-30
+                            2019-03-09
                         </span>
                     </div>
                 
@@ -219,40 +221,82 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="如何使用vultr科学上网"><a href="#如何使用vultr科学上网" class="headerlink" title="如何使用vultr科学上网"></a>如何使用vultr科学上网</h1><p>打开vultr的网页，注册账号，<del>充钱变强</del></p>
-<p>选择服务器节点和配置信息</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1ad8cd1b.png" alt=""></p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1ad8cd1b.png" alt=""></p>
-<p>发现ping不通</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e63db86.png" alt=""></p>
-<p>不是我自己网络问题，明显是被墙了<del>(大清国网墙万岁)</del></p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e660b0b.png" alt=""></p>
-<p>一气之下开了四个</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e6584f1.jpg" alt=""></p>
-<p>然后有一个可用的</p>
-<p>打开putty，连接服务器，输入以下代码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget —no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
-<p>配置服务器，得到端口和一串ssr链接</p>
-<p>配置防火墙</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e63c1ab.jpg" alt=""></p>
-<p>将刚才的ssr码导入shadowsocks，使用shadowsocks连接服务器</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e6418bf.jpg" alt=""></p>
-<p>成功</p>
-<p><img src="https://i.loli.net/2019/01/30/5c51c1e64350a.jpg" alt=""></p>
-
+                <h1 id="一-一阶偏导数"><a href="#一、一阶偏导数" class="headerlink" title="一、一阶偏导数"></a>一、一阶偏导数</h1><h2 id="1-一阶偏导数的定义和计算"><a href="#1-一阶偏导数的定义和计算" class="headerlink" title="1. 一阶偏导数的定义和计算"></a>1. 一阶偏导数的定义和计算</h2><h3 id="def-1-一阶偏导数"><a href="#Def-1-一阶偏导数" class="headerlink" title="Def 1 一阶偏导数"></a>Def 1 一阶偏导数</h3><script type="math/tex; mode=display">
+若\lim_{\Delta x\rightarrow0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}存在,\\\
+则称此极限值为z=f(x,y)在点P_0(x_0,y_0)关于x的偏导数,\\
+记为\frac{\partial z}{\partial x}|_{x=x_0\\y=y_0}或\frac{\partial f}{\partial x}|_{x=x_0\\y=y_0}或z_{x}(x_0,y_0)或f_{x}(x_0,y_0)\\
+即f_{x}(x_0,y_0)=\lim_{\Delta x\rightarrow0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}\\
+类似可定义\lim_{\Delta y\rightarrow0}\frac{f(x_0,y_0+\Delta y)-f(x_0,y_0)}{\Delta y}(存在)\\
+称为z=f(x,y)在点P_0(x_0,y_0)关于y的偏导数\\
+记为\frac{\partial z}{\partial y}|_{x=x_0\\y=y_0}或\frac{\partial f}{\partial y}|_{x=x_0\\y=y_0}或z_{y}(x_0,y_0)或f_{y}(x_0,y_0)\\
+\color{red}{二者合称一阶偏导数}</script><h3 id="def-2-偏导函数"><a href="#Def-2-偏导函数" class="headerlink" title="Def 2 偏导函数"></a>Def 2 偏导函数</h3><script type="math/tex; mode=display">
+z=f(x,y)\quad(x,y)\in D\\
+\begin{cases}
+f_x(x,y),z_x(x,y),\frac{\partial f}{\partial x},\frac{\partial z}{\partial x}&z=f(x,y)对x的偏导函数\\
+f_y(x,y),z_y(x,y),\frac{\partial f}{\partial y},\frac{\partial z}{\partial y}&z=f(x,y)对y的偏导函数\\
+\end{cases}</script><h3 id="remark"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</h3><ol>
+<li><script type="math/tex; mode=display">
+f_{x}(x_0,y_0)=f_x(x,y)|_{x=x_0\\y=y_0}\\
+f_{y}(x_0,y_0)=f_y(x,y)|_{x=x_0\\y=y_0}\\
+f_{x}(x,y)=\lim_{\Delta x\rightarrow0}\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}</script></li>
+<li><script type="math/tex; mode=display">
+偏导函数\stackrel{简称}{\longrightarrow}偏导数\\
+导函数\stackrel{简称}{\longrightarrow}导数\\</script></li>
+<li><script type="math/tex; mode=display">
+求z=f(x,y)的偏导数\stackrel{本质}{\longrightarrow}求一元函数的导数\\
+\begin{cases}
+求\frac{\partial z}{\partial x}-视y为常数\\
+求\frac{\partial z}{\partial y}-视x为常数
+\end{cases}</script></li>
+<li><p>e.g.1</p>
+<script type="math/tex; mode=display">
+f(x,y)=xy+x^2+y^2,求f_x(0,1),f_y(2,0)\\
+\begin{split}
+解:&f_x(x,y)=y+2x \Rightarrow f_x(0,1)=1\\
+&f_y(x,y)=x+2y \Rightarrow f_y(2,0)=2
+\end{split}</script><p>e.g.2</p>
+<script type="math/tex; mode=display">
+z=x^2\sin{xy},求z_x,z_y\\
+\begin{split}
+解:&z_x=2x\sin{xy}+x^2y\cos{xy}\\
+&z_y=x^3\cos{xy}
+\end{split}</script><p>e.g.3</p>
+<script type="math/tex; mode=display">
+u=\sqrt{x^2+y^2+z^2},求u_x,u_y,u_z\\
+\left.\begin{split}
+解:&u_x=\frac{x}{\sqrt{x^2+y^2+z^2}}\\
+&u_y=\frac{y}{\sqrt{x^2+y^2+z^2}}\\
+&u_z=\frac{z}{\sqrt{x^2+y^2+z^2}}\\
+\end{split}\right\}u_x^2+u_y^2+u_z^2=1</script><p>e.g.4</p>
+<script type="math/tex; mode=display">
+理想气体的状态方程PU=RT\\
+求证:\frac{\partial P}{\partial V}\cdot\frac{\partial V}{\partial T}\cdot\frac{\partial T}{\partial P}=-1\\
+\left.\begin{split}
+证明:&P=R\frac{T}{V}\Rightarrow\frac{\partial P}{\partial V}=-R\frac{T}{V^2}\\
+&V=R\frac{T}{P}\Rightarrow\frac{\partial V}{\partial T}=\frac{R}{P}\\
+&T=\frac{PV}{R}\Rightarrow\frac{\partial T}{\partial P}=\frac{V}{R}\\
+\end{split}\right\}
+\Rightarrow
+\begin{split}
+&\frac{\partial P}{\partial V}\cdot\frac{\partial V}{\partial T}\cdot\frac{\partial T}{\partial P}\\
+=&-R\cdot\frac{T}{V^2}\cdot\frac{R}{P}\cdot\frac{V}{R}\\
+=&-R\frac{T}{VP}=-1
+\end{split}</script><p>e.g.5</p>
+<script type="math/tex; mode=display">
+z=x^y(x>0,x\ne 1)\\
+求证:\frac{x}{y}\cdot\frac{\partial z}{\partial x}+\frac{1}{\ln{x}}\cdot\frac{\partial z}{\partial y}=2z\\
+\frac{\partial z}{\partial x}=y\cdot x^{y-1},\frac{\partial z}{\partial y}=x^y\ln x</script></li>
+</ol>
+<h2 id="2-几何意义直观"><a href="#2-几何意义-直观" class="headerlink" title="2. 几何意义(直观)"></a>2. 几何意义(直观)</h2>
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/2019-2-1/" data-toggle="tooltip" data-placement="top" title="2019-2-1">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/article/Wannafly2018-Day7/" data-toggle="tooltip" data-placement="top" title="CCPC-Wannafly Winter Camp 2018 Day7">Next Post &rarr;</a>
+                            <a href="/article/高数笔记2/" data-toggle="tooltip" data-placement="top" title="高数笔记2">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -308,7 +352,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#如何使用vultr科学上网"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;vultr&#x79D1;&#x5B66;&#x4E0A;&#x7F51;" class="headerlink" title="&#x5982;&#x4F55;&#x4F7F;&#x7528;vultr&#x79D1;&#x5B66;&#x4E0A;&#x7F51;"></a>&#x5982;&#x4F55;&#x4F7F;&#x7528;vultr&#x79D1;&#x5B66;&#x4E0A;&#x7F51;</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#一-一阶偏导数"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><a href="#&#x4E00;&#x3001;&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;" class="headerlink" title="&#x4E00;&#x3001;&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;"></a>&#x4E00;&#x3001;&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-一阶偏导数的定义和计算"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text"><a href="#1-&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x8BA1;&#x7B97;" class="headerlink" title="1. &#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x8BA1;&#x7B97;"></a>1. &#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x8BA1;&#x7B97;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#def-1-一阶偏导数"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text"><a href="#Def-1-&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;" class="headerlink" title="Def 1 &#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;"></a>Def 1 &#x4E00;&#x9636;&#x504F;&#x5BFC;&#x6570;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#def-2-偏导函数"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text"><a href="#Def-2-&#x504F;&#x5BFC;&#x51FD;&#x6570;" class="headerlink" title="Def 2 &#x504F;&#x5BFC;&#x51FD;&#x6570;"></a>Def 2 &#x504F;&#x5BFC;&#x51FD;&#x6570;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#remark"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-几何意义直观"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text"><a href="#2-&#x51E0;&#x4F55;&#x610F;&#x4E49;-&#x76F4;&#x89C2;" class="headerlink" title="2. &#x51E0;&#x4F55;&#x610F;&#x4E49;(&#x76F4;&#x89C2;)"></a>2. &#x51E0;&#x4F55;&#x610F;&#x4E49;(&#x76F4;&#x89C2;)</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -328,7 +372,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Cetus" title="Cetus">Cetus</a>
+                          <a class="tag" href="/tags/#高等数学" title="高等数学">高等数学</a>
+                        
+                          <a class="tag" href="/tags/#学习笔记" title="学习笔记">学习笔记</a>
                         
                     </div>
                 </section>
