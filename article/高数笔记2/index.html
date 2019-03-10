@@ -221,102 +221,127 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>e.g. </p>
-<script type="math/tex; mode=display">
+                <p>e.g.</p>
+<p><span class="math display">\[
 f(x,y)=\begin{cases}
-\frac{xy}{x^2+y^2}&(x,y)\ne (0,0)\\
-0&(x,y)= (0,0)
-\end{cases}</script><script type="math/tex; mode=display">
-讨论:\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)</script><script type="math/tex; mode=display">
+\frac{xy}{x^2+y^2}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+讨论:\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)
+\]</span></p>
+<p><span class="math display">\[
 \begin{split}
-解：&1.\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{y\rightarrow0}f(0,y)=0\\
-&2.\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{x\rightarrow0}f(x,x)=\frac{1}{2}
+解：&amp;1.\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{y\rightarrow0}f(0,y)=0\\
+&amp;2.\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{x\rightarrow0}f(x,x)=\frac{1}{2}
 \end{split}\\
-根据路径法,\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)不存在</script><script type="math/tex; mode=display">
+根据路径法,\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)不存在
+\]</span></p>
+<p><span class="math display">\[
 若先x\rightarrow 0,后y\rightarrow0,\\
 有\lim_{y\rightarrow0}\lim_{x\rightarrow0}f(x,y)=\lim_{y\rightarrow0}\frac{0}{y^2}=0\\
 类似有\lim_{x\rightarrow0}\lim_{y\rightarrow0}f(x,y)=0(先y\rightarrow 0,后x\rightarrow0),
-称为二次极限存在（二次极限有先后次序）</script><p>练习：</p>
-<script type="math/tex; mode=display">
-证明:\lim_{x\rightarrow0\\y\rightarrow0}\frac{x-y}{x+y}不存在("路径法")</script><h3 id="3-二重极限存在nleftrightarrow二次极限-存在"><a href="#3-二重极限存在-nLeftrightarrow-二次极限-存在" class="headerlink" title="3. 二重极限存在$\nLeftrightarrow$二次极限 存在"></a>3. 二重极限存在$\nLeftrightarrow$二次极限 存在</h3><p>e.g.1</p>
-<script type="math/tex; mode=display">
+称为二次极限存在（二次极限有先后次序）
+\]</span></p>
+<p>练习： <span class="math display">\[
+证明:\lim_{x\rightarrow0\\y\rightarrow0}\frac{x-y}{x+y}不存在(&quot;路径法&quot;)
+\]</span></p>
+<h3 id="3-二重极限存在nleftrightarrow二次极限-存在">3. 二重极限存在<span class="math inline">\(\nLeftrightarrow\)</span>二次极限 存在</h3>
+<p>e.g.1 <span class="math display">\[
 f(x,y)=\begin{cases}
-\frac{xy}{x^2+y^2}&(x,y)\ne (0,0)\\
-0&(x,y)= (0,0)
+\frac{xy}{x^2+y^2}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
 \end{cases}\\
-在点(0,0)二次极限存在,二重极限不存在</script><p>e.g.2</p>
-<script type="math/tex; mode=display">
+在点(0,0)二次极限存在,二重极限不存在
+\]</span> e.g.2 <span class="math display">\[
 f(x,y)=\begin{cases}
-x\sin\frac{1}{y}+y\sin\frac{1}{x}&(x,y)\ne (0,0)\\
-0&(x,y)= (0,0)
+x\sin\frac{1}{y}+y\sin\frac{1}{x}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
 \end{cases}\\
 \begin{split}
-&0\le|x\sin\frac{1}{y}+y\sin\frac{1}{x}|\le |x|+|y|\rightarrow0(\begin{array} &x\rightarrow x_0\\  y\rightarrow y_0\end{array})\\
-\Rightarrow&\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{x\rightarrow0\\y\rightarrow0}(x\sin\frac{1}{y}+y\sin\frac{1}{x})=0,二重极限存在
+&amp;0\le|x\sin\frac{1}{y}+y\sin\frac{1}{x}|\le |x|+|y|\rightarrow0(\begin{array} &amp;x\rightarrow x_0\\  y\rightarrow y_0\end{array})\\
+\Rightarrow&amp;\lim_{x\rightarrow0\\y\rightarrow0}f(x,y)=\lim_{x\rightarrow0\\y\rightarrow0}(x\sin\frac{1}{y}+y\sin\frac{1}{x})=0,二重极限存在
 \end{split}\\
 \begin{split}
-y\ne 0时,&\lim_{x\rightarrow0}f(x,y)=\lim_{x\rightarrow0}(x\sin\frac{1}{y}+y\sin\frac{1}{x})不存在\\
-\Rightarrow&\lim_{y\rightarrow0}\lim_{x\rightarrow0}f(x,y)不存在\\
-同理&\lim_{x\rightarrow0}\lim_{y\rightarrow0}f(x,y)也不存在
-\end{split}</script><h3 id="4-多元函数的极限"><a href="#4-多元函数的极限" class="headerlink" title="4. 多元函数的极限"></a>4. 多元函数的极限</h3><script type="math/tex; mode=display">
-\lim_{P\rightarrow P_0}f(P)=A(A\in R)\;点函数观点</script><h3 id="5-二元函数极限的计算"><a href="#5-二元函数极限的计算" class="headerlink" title="5. 二元函数极限的计算"></a>5. 二元函数极限的计算</h3><p>总结：</p>
-<ol>
-<li>$”\varepsilon -\delta”$（猜测证）</li>
+y\ne 0时,&amp;\lim_{x\rightarrow0}f(x,y)=\lim_{x\rightarrow0}(x\sin\frac{1}{y}+y\sin\frac{1}{x})不存在\\
+\Rightarrow&amp;\lim_{y\rightarrow0}\lim_{x\rightarrow0}f(x,y)不存在\\
+同理&amp;\lim_{x\rightarrow0}\lim_{y\rightarrow0}f(x,y)也不存在
+\end{split}
+\]</span></p>
+<h3 id="4-多元函数的极限">4. 多元函数的极限</h3>
+<p><span class="math display">\[
+\lim_{P\rightarrow P_0}f(P)=A(A\in R)\;点函数观点
+\]</span></p>
+<h3 id="5-二元函数极限的计算">5. 二元函数极限的计算</h3>
+<p>总结：</p>
+<ol type="1">
+<li><span class="math inline">\(&quot;\varepsilon -\delta&quot;\)</span>（猜测证）</li>
 <li>四则运算</li>
 <li>两边夹</li>
-<li>变量替换($”L’ Hospital”$法则在二元函数求极限时不能直接应用)</li>
+<li>变量替换(<span class="math inline">\(&quot;L&#39; Hospital&quot;\)</span>法则在二元函数求极限时不能直接应用)</li>
 <li>二元初等函数的连续性(后补)</li>
 </ol>
-<p>e.g.1</p>
-<script type="math/tex; mode=display">
+<p>e.g.1 <span class="math display">\[
 \lim_{x\rightarrow0\\y\rightarrow1}\frac{1-xy}{x^2+y^2}=\frac{1}{1^2}=1
-\tag{总结5}</script><p>e.g.2 $”\varepsilon -\delta”$</p>
-<p>e.g.3</p>
-<script type="math/tex; mode=display">
+\tag{总结5}
+\]</span> e.g.2 <span class="math inline">\(&quot;\varepsilon -\delta&quot;\)</span></p>
+<p>e.g.3 <span class="math display">\[
 \begin{split}
-&\lim_{x\rightarrow0\\y\rightarrow0}\frac{x^2+y^2}{\sqrt{x^2+y^2+1}-1}\\
-{\overset{\color{red}"\frac{0}{0}"}{\underset{\color{red}{x^2+y^2=u变量替换}}=}}&\lim_{u\rightarrow0}\frac{u}{\sqrt{u+1}-1}&\color{red}{转化为一元函数极限}\\
-=&\lim_{u\rightarrow0}\frac{1}{\frac{1}{2}(u+1)^2}=2\\
-或{\overset{\color{red}{"\frac{0}{0}"}}{=}}&\lim_{u\rightarrow0}\frac{u}{\frac{1}{2}u}=2
-\end{split}</script><p>e.g.4</p>
-<script type="math/tex; mode=display">
+&amp;\lim_{x\rightarrow0\\y\rightarrow0}\frac{x^2+y^2}{\sqrt{x^2+y^2+1}-1}\\
+{\overset{\color{red}&quot;\frac{0}{0}&quot;}{\underset{\color{red}{x^2+y^2=u变量替换}}=}}&amp;\lim_{u\rightarrow0}\frac{u}{\sqrt{u+1}-1}&amp;\color{red}{转化为一元函数极限}\\
+=&amp;\lim_{u\rightarrow0}\frac{1}{\frac{1}{2}(u+1)^2}=2\\
+或{\overset{\color{red}{&quot;\frac{0}{0}&quot;}}{=}}&amp;\lim_{u\rightarrow0}\frac{u}{\frac{1}{2}u}=2
+\end{split}
+\]</span> e.g.4 <span class="math display">\[
 \begin{split}
-&\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{y}\\
-{\overset{\color{red}{"\frac{0}{0}"}}{=}}&\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{xy}\cdot x\\
-{\overset{\color{red}{"四则"}}{=}}&\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{xy}\cdot\lim_{x\rightarrow 2\\y\rightarrow0}x\\
-\Rightarrow&\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{xy}
+&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{y}\\
+{\overset{\color{red}{&quot;\frac{0}{0}&quot;}}{=}}&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{xy}\cdot x\\
+{\overset{\color{red}{&quot;四则&quot;}}{=}}&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{xy}\cdot\lim_{x\rightarrow 2\\y\rightarrow0}x\\
+\Rightarrow&amp;\lim_{x\rightarrow 2\\y\rightarrow0}\frac{\ln(1+xy)}{xy}
 {\overset{\color{red}令xy=u}{\underset{\color{red}{x^2+y^2=u变量替换}}=}}=\lim_{u\rightarrow0}\frac{\ln(1+u)}{u}=2
-\end{split}</script><p>e.g.5</p>
-<script type="math/tex; mode=display">
-"\frac{\infty}{\infty}":\lim_{x\rightarrow\infty\\y\rightarrow\infty}(x^2+y^2)e^{-(x+y)}\overset{\color{red}{"\frac{\infty}{\infty}"}}{=}00\\
+\end{split}
+\]</span> e.g.5 <span class="math display">\[
+&quot;\frac{\infty}{\infty}&quot;:\lim_{x\rightarrow\infty\\y\rightarrow\infty}(x^2+y^2)e^{-(x+y)}\overset{\color{red}{&quot;\frac{\infty}{\infty}&quot;}}{=}00\\
 \begin{split}
-&两边夹\quad&0\le(x^2+y^2)e^{-(x+y)}\le \frac{(x+y)^2}{e^{x+y}}\rightarrow0(\begin{array} &x\rightarrow +\infty\\  y \rightarrow +\infty\end{array})\\
-&&\lim_{u\rightarrow0}\frac{u^2}{e^u}\overset{\color{red}{"\frac{\infty}{\infty}"}}{=}0\quad(换元法)\\
-&练习:&\lim_{x\rightarrow0\\y\rightarrow0}(x+y)\ln(x^2+y^2)
-\end{split}\\</script><h1 id="四-多元函数的连续性"><a href="#四、多元函数的连续性" class="headerlink" title="四、多元函数的连续性"></a>四、多元函数的连续性</h1><h2 id="def-4"><a href="#Def-4" class="headerlink" title="Def 4"></a>Def 4</h2><script type="math/tex; mode=display">
+&amp;两边夹\quad&amp;0\le(x^2+y^2)e^{-(x+y)}\le \frac{(x+y)^2}{e^{x+y}}\rightarrow0(\begin{array} &amp;x\rightarrow +\infty\\  y \rightarrow +\infty\end{array})\\
+&amp;&amp;\lim_{u\rightarrow0}\frac{u^2}{e^u}\overset{\color{red}{&quot;\frac{\infty}{\infty}&quot;}}{=}0\quad(换元法)\\
+&amp;练习:&amp;\lim_{x\rightarrow0\\y\rightarrow0}(x+y)\ln(x^2+y^2)
+\end{split}\\
+\]</span></p>
+<h1 id="四-多元函数的连续性">四、多元函数的连续性</h1>
+<h2 id="def-4">Def 4</h2>
+<p><span class="math display">\[
 \lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=f(x_0,y_0)\Rightarrow z=f(x,y)在P_0(x_0,y_0)连续\\
 否则,称z=f(x,y)在P_0(x_0,y_0)不连续,P_0为间断点
 \begin{cases}
 1.P_0点无定义\\
 2.极限不存在\\
 3.极限存在但\ne f(P_0)
-\end{cases}</script><p>例如</p>
-<script type="math/tex; mode=display">
+\end{cases}
+\]</span></p>
+<p>例如 <span class="math display">\[
 f(x,y)=
 \begin{cases}
-(x^2+y^2)\sin\frac{1}{x^2+y^2}&(x,y)\ne (0,0)\\
-0&(x,y)= (0,0)
+(x^2+y^2)\sin\frac{1}{x^2+y^2}&amp;(x,y)\ne (0,0)\\
+0&amp;(x,y)= (0,0)
 \end{cases}\\
-\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=0=f(0,0),函数连续</script><p>$Remark$ 可推广</p>
-<h2 id="def-5"><a href="#Def-5" class="headerlink" title="Def 5"></a>Def 5</h2><script type="math/tex; mode=display">
-z=f(x,y)在D上的每一点都连续，称f(x,y)在D上连续或f(x,y)为D上的连续函数</script><h2 id="def-6"><a href="#Def-6" class="headerlink" title="Def 6"></a>Def 6</h2><script type="math/tex; mode=display">
-多元初等函数:由常数及一元基本初等函数经过有限次四则运算和(或)有限次复合形成的函数</script><p>e.g.</p>
-<script type="math/tex; mode=display">
+\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=0=f(0,0),函数连续
+\]</span> <span class="math inline">\(Remark\)</span> 可推广</p>
+<h2 id="def-5">Def 5</h2>
+<p><span class="math display">\[
+z=f(x,y)在D上的每一点都连续，称f(x,y)在D上连续或f(x,y)为D上的连续函数
+\]</span></p>
+<h2 id="def-6">Def 6</h2>
+<p><span class="math display">\[
+多元初等函数:由常数及一元基本初等函数经过有限次四则运算和(或)有限次复合形成的函数
+\]</span></p>
+<p>e.g. <span class="math display">\[
 \lim_{x\rightarrow x_0\\y\rightarrow y_0}\frac{\ln(2^x+e^y)+1}{\sin(x^2+y^2)}=\frac{\ln3+1}{\sin1}\\
 \color{red}{一切二元初等函数在其定义域内都是连续的}\\
 z=f(x,y)\quad(x,y)\in D\\
-\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=f(x_0,y_0)为二元初等函数的极限\color{red}{(x_0,y_0)}\in D\\</script><p>推广</p>
-<script type="math/tex; mode=display">
+\lim_{x\rightarrow x_0\\y\rightarrow y_0}f(x,y)=f(x_0,y_0)为二元初等函数的极限\color{red}{(x_0,y_0)}\in D\\
+\]</span> 推广 <span class="math display">\[
 \begin{split}
 有界闭区域上二元连续函数的性质\\
 闭区间上一元连续函数的性质
@@ -327,7 +352,10 @@ z=f(x,y)\quad(x,y)\in D\\
 2.最值性\\
 3.介值性\\
 4.一致连续性\\
-\end{cases}</script><h1 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h1><p>见高数笔记3</p>
+\end{cases}
+\]</span></p>
+<h1 id="偏导数">偏导数</h1>
+<p>见高数笔记3</p>
 
                 
 
@@ -397,7 +425,7 @@ z=f(x,y)\quad(x,y)\in D\\
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-二重极限存在nleftrightarrow二次极限-存在"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><a href="#3-&#x4E8C;&#x91CD;&#x6781;&#x9650;&#x5B58;&#x5728;-nLeftrightarrow-&#x4E8C;&#x6B21;&#x6781;&#x9650;-&#x5B58;&#x5728;" class="headerlink" title="3. &#x4E8C;&#x91CD;&#x6781;&#x9650;&#x5B58;&#x5728;$\nLeftrightarrow$&#x4E8C;&#x6B21;&#x6781;&#x9650; &#x5B58;&#x5728;"></a>3. &#x4E8C;&#x91CD;&#x6781;&#x9650;&#x5B58;&#x5728;$\nLeftrightarrow$&#x4E8C;&#x6B21;&#x6781;&#x9650; &#x5B58;&#x5728;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-多元函数的极限"><span class="toc-nav-number">2.</span> <span class="toc-nav-text"><a href="#4-&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;" class="headerlink" title="4. &#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;"></a>4. &#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-二元函数极限的计算"><span class="toc-nav-number">3.</span> <span class="toc-nav-text"><a href="#5-&#x4E8C;&#x5143;&#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x8BA1;&#x7B97;" class="headerlink" title="5. &#x4E8C;&#x5143;&#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x8BA1;&#x7B97;"></a>5. &#x4E8C;&#x5143;&#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x8BA1;&#x7B97;</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#四-多元函数的连续性"><span class="toc-nav-number"></span> <span class="toc-nav-text"><a href="#&#x56DB;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x8FDE;&#x7EED;&#x6027;" class="headerlink" title="&#x56DB;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x8FDE;&#x7EED;&#x6027;"></a>&#x56DB;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x8FDE;&#x7EED;&#x6027;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-4"><span class="toc-nav-number"></span> <span class="toc-nav-text"><a href="#Def-4" class="headerlink" title="Def 4"></a>Def 4</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-5"><span class="toc-nav-number"></span> <span class="toc-nav-text"><a href="#Def-5" class="headerlink" title="Def 5"></a>Def 5</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-6"><span class="toc-nav-number"></span> <span class="toc-nav-text"><a href="#Def-6" class="headerlink" title="Def 6"></a>Def 6</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#偏导数"><span class="toc-nav-number"></span> <span class="toc-nav-text"><a href="#&#x504F;&#x5BFC;&#x6570;" class="headerlink" title="&#x504F;&#x5BFC;&#x6570;"></a>&#x504F;&#x5BFC;&#x6570;</span></a>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-二重极限存在nleftrightarrow二次极限-存在"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">3. &#x4E8C;&#x91CD;&#x6781;&#x9650;&#x5B58;&#x5728;<span class="math inline">\(\nLeftrightarrow\)</span>&#x4E8C;&#x6B21;&#x6781;&#x9650; &#x5B58;&#x5728;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-多元函数的极限"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">4. &#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-二元函数极限的计算"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">5. &#x4E8C;&#x5143;&#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x8BA1;&#x7B97;</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#四-多元函数的连续性"><span class="toc-nav-number"></span> <span class="toc-nav-text">&#x56DB;&#x3001;&#x591A;&#x5143;&#x51FD;&#x6570;&#x7684;&#x8FDE;&#x7EED;&#x6027;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-4"><span class="toc-nav-number"></span> <span class="toc-nav-text">Def 4</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-5"><span class="toc-nav-number"></span> <span class="toc-nav-text">Def 5</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#def-6"><span class="toc-nav-number"></span> <span class="toc-nav-text">Def 6</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#偏导数"><span class="toc-nav-number"></span> <span class="toc-nav-text">&#x504F;&#x5BFC;&#x6570;</span></a>
         
         </div>
       </aside>
