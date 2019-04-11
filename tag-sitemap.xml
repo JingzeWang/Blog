@@ -100,13 +100,6 @@
     </url>
 
     <url>
-        <loc>https://blog.iostream.site/tags/ACM/</loc>
-        <lastmod>2019-03-11T05:27:57.536Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://blog.iostream.site/tags/CodeForces/</loc>
         <lastmod>2019-03-11T05:27:57.536Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -114,29 +107,50 @@
     </url>
 
     <url>
-        <loc>https://blog.iostream.site/tags/%E6%B0%B4%E9%A2%98/</loc>
-        <lastmod>2019-03-11T05:27:57.536Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://blog.iostream.site/tags/Cetus/</loc>
-        <lastmod>2019-03-19T09:01:18.954Z</lastmod>
+        <lastmod>2019-04-02T07:59:09.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://blog.iostream.site/tags/CSAPP/</loc>
-        <lastmod>2019-03-19T09:01:18.954Z</lastmod>
+        <lastmod>2019-04-02T07:59:09.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://blog.iostream.site/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%A4%84%E7%90%86/</loc>
-        <lastmod>2019-03-19T09:01:18.954Z</lastmod>
+        <lastmod>2019-04-02T07:59:09.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.iostream.site/tags/ACM/</loc>
+        <lastmod>2019-04-11T14:18:26.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.iostream.site/tags/%E6%B0%B4%E9%A2%98/</loc>
+        <lastmod>2019-04-11T14:18:26.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.iostream.site/tags/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%8C%E6%AD%BB%E6%BB%85%E3%82%B7%E3%82%BF%E4%B8%96%E7%95%8C%E3%80%9C%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AD%E3%82%A4%E3%83%89%E3%81%A8%E3%81%B5%E3%81%9F%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E3%81%A7%E7%94%9F%E3%81%8D%E3%82%8D%E3%80%9C/</loc>
+        <lastmod>2019-04-11T14:18:26.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.iostream.site/tags/level-D/</loc>
+        <lastmod>2019-04-11T14:18:26.834Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

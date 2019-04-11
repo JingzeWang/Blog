@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>https://blog.iostream.site/article/%E8%8D%92%E3%82%8C%E6%9E%9C%E3%81%A6%E3%81%9F%E8%AD%A6%E5%AF%9F%E7%BD%B2/</loc>
+        <lastmod>2019-04-11T14:18:26.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://blog.iostream.site/article/CSAPP-Datalab/</loc>
-        <lastmod>2019-03-19T09:01:18.954Z</lastmod>
+        <lastmod>2019-04-02T07:59:09.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

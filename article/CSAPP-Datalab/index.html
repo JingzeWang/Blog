@@ -146,6 +146,13 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -154,13 +161,6 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -237,9 +237,11 @@
 按照位运算的法则可推出代码所示结果
 \]</span></p>
 <h2 id="3-logicalshift">3. logicalShift</h2>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * logicalShift - shift x to the right by n, using a logical shift</span></span><br><span class="line"><span class="comment"> *   Can assume that 0 &lt;= n &lt;= 31</span></span><br><span class="line"><span class="comment"> *   Examples: logicalShift(0x87654321,4) = 0x08765432</span></span><br><span class="line"><span class="comment"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;</span></span><br><span class="line"><span class="comment"> *   Max ops: 20</span></span><br><span class="line"><span class="comment"> *   Rating: 3 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">logicalShift</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * logicalShift - shift x to the right by n, using a logical shift</span></span><br><span class="line"><span class="comment"> *   Can assume that 0 &lt;= n &lt;= 31</span></span><br><span class="line"><span class="comment"> *   Examples: logicalShift(0x87654321,4) = 0x08765432</span></span><br><span class="line"><span class="comment"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;</span></span><br><span class="line"><span class="comment"> *   Max ops: 20</span></span><br><span class="line"><span class="comment"> *   Rating: 3 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">logicalShift</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> fuck = ~(<span class="number">1</span> &lt;&lt; <span class="number">31</span>);</span><br><span class="line">  fuck = ((fuck &gt;&gt; n) &lt;&lt; <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">  fuck &amp;= (x &gt;&gt; n);</span><br><span class="line">  <span class="keyword">return</span> fuck;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><span class="math display">\[
-解：不会.jpg
+解：先构造一个数temp，使其为2^{31}的反码\\
+由n\geq 0，令temp&gt;&gt;(n-1)\\
+temp为0开头接31个1，然后位与即可
 \]</span></p>
 <h2 id="4-bitcount">4. bitCount</h2>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * bitCount - returns count of number of 1's in word</span></span><br><span class="line"><span class="comment"> *   Examples: bitCount(5) = 2, bitCount(7) = 3</span></span><br><span class="line"><span class="comment"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;</span></span><br><span class="line"><span class="comment"> *   Max ops: 40</span></span><br><span class="line"><span class="comment"> *   Rating: 4</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bitCount</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -277,6 +279,10 @@
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/article/荒れ果てた警察署/" data-toggle="tooltip" data-placement="top" title="荒れ果てた警察署">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
