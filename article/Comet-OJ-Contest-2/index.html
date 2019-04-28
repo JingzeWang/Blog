@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          荒れ果てた警察署 - restart_ | Blog
+          Comet OJ - Contest #2 - restart_ | Blog
         
     </title>
 
-    <link rel="canonical" href="https://blog.iostream.site/article/荒れ果てた警察署/">
+    <link rel="canonical" href="https://blog.iostream.site/article/Comet-OJ-Contest-2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -90,18 +90,14 @@
                             
                               <a class="tag" href="/tags/#ACM" title="ACM">ACM</a>
                             
-                              <a class="tag" href="/tags/#水题" title="水题">水题</a>
-                            
-                              <a class="tag" href="/tags/#エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜" title="エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜">エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜</a>
-                            
-                              <a class="tag" href="/tags/#level D" title="level D">level D</a>
+                              <a class="tag" href="/tags/#Comet OJ" title="Comet OJ">Comet OJ</a>
                             
                         </div>
-                        <h1>荒れ果てた警察署</h1>
-                        <h2 class="subheading">MISSION LEVEL:D</h2>
+                        <h1>Comet OJ - Contest #2</h1>
+                        <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by restart_ on
-                            2019-04-11
+                            2019-04-28
                         </span>
                     </div>
                 
@@ -225,34 +221,14 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>试玩了一下《エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜》，真好玩</p>
-<p>传送门:<a href="https://paiza.jp/botchi/challenges/botchi_d_4001" target="_blank" rel="noopener">荒れ果てた警察署 [MISSION LEVEL: D]</a></p>
-<h2 id="题目描述">题目描述</h2>
-<p>あなたは 0 から 9 の数字を 3 つ入力すると開く扉を開こうとしています。</p>
-<p>鍵の番号は左から 2 つまで判明しています。 3 つ目に関しては以下の法則で決まることがわかりました。</p>
-<p>・2 つ目までをすべて足す ・足したものを 10 で割ったときの余り</p>
-<p>2 つ目までの数字が与えられるので 3 つ目を計算し出力してください。</p>
-<h2 id="输入描述">输入描述</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n_1 n_2</span><br></pre></td></tr></table></figure>
-<p>・1 行目で 2 桁目までの数字がスペース区切りで入力されます。 ・入力は 1 行となり、末尾に改行が 1 つ入ります。</p>
-<h3 id="条件限制">条件限制</h3>
-<p>・0 ≦ n_1 ≦ 9 ・0 ≦ n_2 ≦ 9</p>
-<h2 id="输出描述">输出描述</h2>
-<p>3 つある鍵の数字の 3 つ目を以下の法則にしたがって計算し出力してください。</p>
-<p>・2 つ目までをすべて足す ・足したものを 10 で割ったときの余り</p>
-<p>出力の最後に改行を 1 つ入れ、余計な文字、空行を含んではいけません。</p>
-<h2 id="样例">样例</h2>
-<p>样例输入1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 8</span><br></pre></td></tr></table></figure>
-<p>样例输出1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
-<p>样例输入2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9 1</span><br></pre></td></tr></table></figure>
-<p>样例输出2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
-<h2 id="题解">题解</h2>
-<p>a+b题，帮助熟悉系统，强行水一篇博客</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 自分の得意な言語で</span></span><br><span class="line">    <span class="comment">// Let's チャレンジ！！</span></span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (a + b) % <span class="number">10</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <p>传送门：<a href="https://www.cometoj.com/contest/37" target="_blank" rel="noopener">Comet OJ - Contest #2</a></p>
+<p>官方题解：<a href="http://static.eduzhixin.com/cometoj/solution/contest_36.pdf" target="_blank" rel="noopener">contest_36.pdf</a></p>
+<p>由于有官方题解了就不用码字了直接贴代码了嘤嘤嘤</p>
+<p>为什么我要用JAVA？因为JAVA太难了（大嘘）</p>
+<h1 id="a-因自过去而至的残响起舞">A 因自过去而至的残响起舞</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Time: 122ms Memory: 25MB</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">while</span>(input.hasNextLine()) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="keyword">long</span> a = input.nextLong(), b = <span class="number">0</span>, sum = <span class="number">0</span>, i = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">for</span>(; sum &lt;= a; ++i) &#123;</span><br><span class="line">					<span class="keyword">if</span>(i &lt; <span class="number">2</span>) &#123;</span><br><span class="line">						++sum;</span><br><span class="line">						++b;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="keyword">long</span> temp = b / <span class="number">2</span>;</span><br><span class="line">						sum += temp;</span><br><span class="line">						b += temp;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				System.out.println(i);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">catch</span>(Exception e) &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="b-她的想法-他的战斗">B 她的想法、他的战斗</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Time: 140ms Memory: 28MB</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span> a, <span class="keyword">double</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(a &gt; b) <span class="keyword">return</span> a;</span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">while</span>(input.hasNextLine()) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				Double l = input.nextDouble(), r = input.nextDouble(), L = input.nextDouble(), R = input.nextDouble();</span><br><span class="line">				Double a = - <span class="number">1</span> / (r - l), b = (L + R + <span class="number">2</span> * l) / <span class="number">2</span> / (r - l), c = - (L + R) / <span class="number">2</span> * l / (r - l);</span><br><span class="line">				<span class="comment">//System.out.println(a); System.out.println(b); System.out.println(c);</span></span><br><span class="line">				Double temp = -b / (<span class="number">2</span> * a);</span><br><span class="line">				Double res;</span><br><span class="line">				<span class="keyword">if</span>(temp &lt; l) &#123;</span><br><span class="line">					res = max(a * l * l + b * l + c, a * r * r + b * r + c);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(temp &gt; r) &#123;</span><br><span class="line">					res = max(a * l * l + b * l + c, a * r * r + b * r + c);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> res = a * temp * temp + b * temp + c;</span><br><span class="line">				res = max(<span class="number">0.0</span>, res);</span><br><span class="line">				System.out.println(String.format(<span class="string">"%.4f"</span>, res));</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">catch</span>(Exception e) &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 
 
@@ -260,13 +236,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/Comet-OJ-Contest-2/" data-toggle="tooltip" data-placement="top" title="Comet OJ - Contest #2">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/article/CSAPP-Datalab/" data-toggle="tooltip" data-placement="top" title="CSAPP-Datalab">Next Post &rarr;</a>
+                            <a href="/article/荒れ果てた警察署/" data-toggle="tooltip" data-placement="top" title="荒れ果てた警察署">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -322,7 +294,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目描述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#输入描述"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x8F93;&#x5165;&#x63CF;&#x8FF0;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#条件限制"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">&#x6761;&#x4EF6;&#x9650;&#x5236;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#输出描述"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x8F93;&#x51FA;&#x63CF;&#x8FF0;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#样例"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">&#x6837;&#x4F8B;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题解"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">&#x9898;&#x89E3;</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#a-因自过去而至的残响起舞"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">A &#x56E0;&#x81EA;&#x8FC7;&#x53BB;&#x800C;&#x81F3;&#x7684;&#x6B8B;&#x54CD;&#x8D77;&#x821E;</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#b-她的想法-他的战斗"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">B &#x5979;&#x7684;&#x60F3;&#x6CD5;&#x3001;&#x4ED6;&#x7684;&#x6218;&#x6597;</span></a></li></ol>
         
         </div>
       </aside>
@@ -344,11 +316,7 @@
                        
                           <a class="tag" href="/tags/#ACM" title="ACM">ACM</a>
                         
-                          <a class="tag" href="/tags/#水题" title="水题">水题</a>
-                        
-                          <a class="tag" href="/tags/#エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜" title="エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜">エンジニアが死滅シタ世界〜アンドロイドとふたりぼっちで生きろ〜</a>
-                        
-                          <a class="tag" href="/tags/#level D" title="level D">level D</a>
+                          <a class="tag" href="/tags/#Comet OJ" title="Comet OJ">Comet OJ</a>
                         
                     </div>
                 </section>

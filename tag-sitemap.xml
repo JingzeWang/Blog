@@ -128,13 +128,6 @@
     </url>
 
     <url>
-        <loc>https://blog.iostream.site/tags/ACM/</loc>
-        <lastmod>2019-04-11T14:18:26.834Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://blog.iostream.site/tags/%E6%B0%B4%E9%A2%98/</loc>
         <lastmod>2019-04-11T14:18:26.834Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -151,6 +144,20 @@
     <url>
         <loc>https://blog.iostream.site/tags/level-D/</loc>
         <lastmod>2019-04-11T14:18:26.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.iostream.site/tags/ACM/</loc>
+        <lastmod>2019-04-28T10:20:52.800Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.iostream.site/tags/Comet-OJ/</loc>
+        <lastmod>2019-04-28T10:20:52.800Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
